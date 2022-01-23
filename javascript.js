@@ -8,8 +8,8 @@ function computerPlay() {
 console.log(computerPlay(game));
 /* userInput function prompts user for rock, paper scissors. That is stored into the user variable. */
 
-function userPlay(game) {
-    
+function userPlay() {
+ let userinput = prompt("Rock, Paper, Scissors?")
 }
 /* Compare user input to computer input with if and else */
 
