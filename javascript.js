@@ -1,13 +1,14 @@
 /* game variable that has rock as 0, Paper as 1, and Scissors as 2 */
-const game = ["Rock", "Paper", "Scissors"];
+const game = ["rock", "scissors", "paper"];
 
 /* computer function that allows them to randomly choose a game variable */
 function computerPlay() {
     return game[Math.floor(Math.random()*game.length)];
 }
+
 /* user prompt function that allows them to choose a variable */
 function userPlay() {
-    return prompt("Rock, Paper, Scissors?");
+    return window.prompt("Rock, Paper, Scissors?").toLowerCase();
 }
 
 /* variables to store the above functions for the function below */
@@ -18,10 +19,10 @@ const computerSelection = computerPlay();
 function singleRound() {
     if (userSelection > computerSelection) {
         return ("You beat the computer!");
-    } else if (userSelection == computerSelection) {
+    } else if (userSelection === computerSelection) {
         return ("It's a tie. Please try again");
-    } else {
-        return("Please try again!");
+    } else if (userSelection < computerSelection) {
+        return("You lost. Please try again!");
     }
 }
 
