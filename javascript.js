@@ -1,19 +1,31 @@
-const game = ["rock", "paper", "scissors"];
+/* game variable that has rock as 0, Paper as 1, and Scissors as 2 */
+const game = ["Rock", "Paper", "Scissors"];
 
-/* computerPlay function chooses # between 0-2. That # corresponds with rock, paper, scissors. Function outputs the # as the corresponding string */
+/* computer function that allows them to randomly choose a game variable */
 function computerPlay() {
-    return game[Math.floor(Math.random()* game.length)];
+    return game[Math.floor(Math.random()*game.length)];
 }
-
-console.log(computerPlay(game));
-/* userInput function prompts user for rock, paper scissors. That is stored into the user variable. */
-
+/* user prompt function that allows them to choose a variable */
 function userPlay() {
- let userinput = prompt("Rock, Paper, Scissors?")
+    return prompt("Rock, Paper, Scissors?");
 }
-/* Compare user input to computer input with if and else */
 
-/* if user wins, output you win, else, you lose */
+/* variables to store the above functions for the function below */
+const userSelection = userPlay();
+const computerSelection = computerPlay();
 
+/* single round function that compares the two inputs and gives a statement according to the conditions */
+function singleRound() {
+    if (userSelection > computerSelection) {
+        return ("You beat the computer!");
+    } else if (userSelection == computerSelection) {
+        return ("It's a tie. Please try again");
+    } else {
+        return("Please try again!");
+    }
+}
+
+/* automatically runs the functions when you load the page */
+console.log(singleRound(userSelection, computerSelection));
 
 
