@@ -5,6 +5,7 @@ let computerBalance = 0;
 function singleRound() {
     const userSelection = userPlay();
     const computerSelection = computerPlay();
+    
     function userPlay() {
         return prompt("Rock, Paper, Scissors?").toLowerCase();
     }
