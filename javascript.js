@@ -1,3 +1,7 @@
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
 const game = ["rock", "scissors", "paper"];
 let userBalance = 0;
 let computerBalance = 0;
@@ -7,8 +11,11 @@ function singleRound() {
     const computerSelection = computerPlay();
     
     function userPlay() {
-        return prompt("Rock, Paper, Scissors?").toLowerCase();
+        rock.addEventListener("click", console.log("rock"));
+        paper.addEventListener("click", console.log('paper'));
+        scissors.addEventListener("click", console.log('scissors'));
     }
+    
     function computerPlay() {
         return game[Math.floor(Math.random()*game.length)];
     }
@@ -36,11 +43,6 @@ function singleRound() {
     }
 }
 
-function multipleRound() {
-    for (rounds = 0; rounds < 5; rounds++) {
-        console.log(singleRound());
-    }
-}
+    
 
-console.log(multipleRound());
 
