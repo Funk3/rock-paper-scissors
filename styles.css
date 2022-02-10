@@ -1,0 +1,9 @@
+.body {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.player .computer .playercounter .computercounter{
+    display: flex;
+}
+
